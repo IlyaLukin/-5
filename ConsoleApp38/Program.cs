@@ -20,7 +20,8 @@ namespace Exercise5
                 for (int j = 0; j < 10; j++)
                 {
                     mas[i, j] = rand.Next(1, 9);
-                  
+                  if (i == j)
+                        mas[i, j] /= -1;
                 }
             }
 
