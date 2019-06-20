@@ -12,7 +12,7 @@ namespace Exercise5
         static void Main(string[] args)
         {
             
-            int[,] mas = new int[10, 10];
+            double[,] mas = new double[10, 10];
             Random rand = new Random();
             
             for(int i=0;i<10;i++)
@@ -20,6 +20,7 @@ namespace Exercise5
                 for (int j = 0; j < 10; j++)
                 {
                     mas[i, j] = rand.Next(1, 9);
+                    mas[i,j]/=10;
                   if (i == j)
                         mas[i, j] /= -1;
                 }
@@ -33,9 +34,9 @@ namespace Exercise5
             }
 
 
-            int maxElement = mas[0, 0];
+            double maxElement = mas[0, 0];
 
-            foreach (int element in mas)
+            foreach (double element in mas)
             {
                 if(maxElement<element)
                 {
